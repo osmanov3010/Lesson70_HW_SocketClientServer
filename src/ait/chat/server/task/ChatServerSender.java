@@ -21,6 +21,7 @@ public class ChatServerSender implements Runnable {
             String message = box.pop();
             for (PrintWriter printWriter : printWriters) {
                 printWriter.println(message);
+                printWriter.flush();
             }
         }
     }
