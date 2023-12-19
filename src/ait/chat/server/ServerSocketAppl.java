@@ -2,7 +2,6 @@ package ait.chat.server;
 
 import ait.chat.server.task.ChatServerReceiver;
 import ait.chat.server.task.ChatServerSender;
-import ait.chat.server.task.ClientHandler;
 import ait.mediation.BlkQueueImpl;
 
 import java.io.IOException;
@@ -10,8 +9,6 @@ import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.ArrayList;
-import java.util.List;
 
 public class ServerSocketAppl {
     public static void main(String[] args) {
