@@ -30,7 +30,6 @@ public class MessageSender implements Runnable {
             while (!"exit".equalsIgnoreCase(message)) {
                 socketWriter.println(name + " [" + LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm")) + "] " + message);
                 socketWriter.flush();
-                System.out.println("Enter your message or type exit for quit");
                 message = br.readLine();
             }
 

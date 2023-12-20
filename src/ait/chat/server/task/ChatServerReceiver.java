@@ -1,5 +1,6 @@
 package ait.chat.server.task;
 
+import ait.mediation.BlkQueue;
 import ait.mediation.BlkQueueImpl;
 
 import java.io.BufferedReader;
@@ -11,9 +12,9 @@ import java.util.List;
 
 public class ChatServerReceiver implements Runnable {
     private Socket socket;
-    private BlkQueueImpl<String> box;
+    private BlkQueue<String> box;
 
-    public ChatServerReceiver(Socket socket, BlkQueueImpl<String> box) {
+    public ChatServerReceiver(Socket socket, BlkQueue<String> box) {
         this.socket = socket;
         this.box = box;
     }
